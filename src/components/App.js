@@ -6,21 +6,21 @@ import '../styles/App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()};
+    this.state = { date: new Date() };
   }
 
   componentDidMount() {
-    this.timerID = setInterval(
-// write your code here
- 
-    );
+    // write your code here
+    this.timerID = setInterval(() => {
+      this.tick()
+    },1000);
   }
 
   tick() {
     this.setState({
       date: new Date()
     });
-    
+
   }
 
   render() {
